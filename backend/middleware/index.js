@@ -1,8 +1,8 @@
 const { urlStore } = require("../db");
 
 function urlWare(req, res, next){
-    let { url } = req.body ;
-    if( url.trim().length == 0){
+    let { url } = req.body ;    
+    if( url?.trim().length == 0){
         return res.status(400).json({err : "input is empty"})
     }
     next();
